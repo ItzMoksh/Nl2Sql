@@ -16,7 +16,7 @@ EndDate = ""
 import re
 from nltk.stem import WordNetLemmatizer
 
-con = MySQLdb.connect("54.254.180.97","moksh","moksh@moglix@123","analytics_temp")
+con = MySQLdb.connect("ip","user","password","Database_Name")
 cur = con.cursor()
 
 
@@ -568,10 +568,4 @@ for table in final_tables:
     QE = 1
 
 fp.close()
-
-
-# In[3]:
-
-
-print(date_keys)
-
+con.close()
